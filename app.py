@@ -56,8 +56,20 @@ def display_info():
 	except Exception as e:
 		return e.message
 
+
+@app.route('/loading/_info_/')
+def display_info_2():
+	try:
+		return  info.info_string
+	except Exception as e:
+		return e.message
+
 @app.route('/_output_/', methods=["GET","POST"])
 def output():
+	return render_template('output.html', grid = info.grid, gridnum = info.gridnum , wordlist = info.wordlist)
+
+@app.route('/loading/_output_/', methods=["GET","POST"])
+def output_2():
 	return render_template('output.html', grid = info.grid, gridnum = info.gridnum , wordlist = info.wordlist)
 
 if __name__ == "__main__":
