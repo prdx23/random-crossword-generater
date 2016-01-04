@@ -1,1 +1,1 @@
-web: bin/start-nginx gunicorn -c gunicorn.conf app:app --log-file=-
+web: python app.py
