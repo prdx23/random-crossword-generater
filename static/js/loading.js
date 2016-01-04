@@ -8,12 +8,12 @@ var olddata = '';
 
 function main()
 {
-    $.get('/_info_', 
+    $.get({{ url_for('_info_') }}, 
     	function(data, status)
     	{
         	if(data=='DONE')
         	{
-        		window.location.replace("/_output_");
+        		window.location.replace({{ url_for('_output_') }});
         		clearInterval(id);
         	}
         	else
