@@ -7,4 +7,5 @@ beautifulsoup4==4.4.1
 gunicorn==19.4.4
 itsdangerous==0.24
 requests==2.9.1
+uWSGI==2.0.12
 wsgiref==0.1.2
