@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Random Crossword Generator</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+		<link href="{{ url_for('static', filename='css/font-awesome.min.css') }}" rel="stylesheet">
+		<link rel="shortcut icon" href="{{ url_for('static', filename='images/crossword.png') }}">
+		<link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Anaheim' rel='stylesheet' type='text/css'>
+
+	</head>
+
+
+	<body style='font-family: "Anaheim", sans-serif;'>
+
+		<b>
+		<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+		<nav class='navbar navbar-inverse' style='border-radius: 0px;'>
+			<div class='container-fluid'>
+
+				<div class="navbar-header">
+			      
+					<a class="navbar-brand" href="{{ url_for('home') }}">
+			    		<img alt="Brand" src="{{ url_for('static', filename='images/crossword.png') }}" style='width:40px;height:40px;position:relative;top:-10px'>
+			    	</a>
+
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand" style='font-family: "Bangers", cursive;font-size:25px' href="{{ url_for('home') }}"></b>Random Crossword Generator<b></a>
+			    </div>
+
+			    <div class="collapse navbar-collapse navbar-right" id="navbar-collapse">
+			    	<ul class="nav navbar-nav">
+			        	<li class="active"><a href="{{ url_for('home') }}">Home</a></li>
+			        	<li><a href="#">Github</a></li>
+			        </ul>
+			    </div>
+
+
+
+
+
+				<!--p style='font-size: 30px;'>Random Crossword Generator</p-->
+
+			</div>
+		</nav>
+
+
+		<!--hr style='color: black;background-color: black;margin-bottom: -5px;'-->
+
+		{% block body %}
+
+		{% endblock %}
+
+
+
+	</b>
+
+	</body>
+</html>

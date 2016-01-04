@@ -1,0 +1,90 @@
+{% extends "main.html" %}
+
+{% block body %}
+
+	<div class='container'>
+
+		<h3>
+			To generate a crossword please enter the parameters below :
+		</h3>
+
+		<br>
+
+		<form class="form-horizontal" method="post"  action="{{ url_for('loading') }}">
+
+			<div class="form-group has-feedback">
+				
+				<label for="boardsize" class="col-sm-2 control-label">Board Size:</label>
+				<div class="col-sm-10  boardsize">
+	    			<input type="number" class="form-control" id="boardsize" name="boardsize" placeholder="Board Size" value='30'>
+	    			<span class="i1 glyphicon glyphicon-ok form-control-feedback"></span>
+  					
+				</div>
+				<div class='col-sm-2'></div>
+				<div class="col-sm-10">
+					<p class="help-block">Enter the board size you want here.<br>
+						Lower sizes result in better crosswords but should be given much higher processing time.<br>
+						30 is a good number to start with. Don't enter below 20.
+					</p>
+				</div>
+
+
+			</div>		
+
+			
+
+			<div class="form-group has-feedback">
+
+				<label for="wordno" class="col-sm-2 control-label">No. of Words:</label>
+				<div class="col-sm-10  wordno">
+	    			<input type="number" class="form-control" id="wordno" name="wordno" placeholder="No. of Words" value='20'>
+	    			<span class="i2 glyphicon glyphicon-ok form-control-feedback"></span>
+				</div>
+				<div class='col-sm-2'></div>
+				<div class="col-sm-10">
+					<p class="help-block">Enter the number of words to make the crossword with.<br>
+						20 is good for medium sized crossword. Minimum is 10.
+					</p>
+				</div>
+
+			</div>
+
+			
+
+			<div class="form-group has-feedback">
+
+				<label for="sec" class="col-sm-2 control-label">Processing Time:</label>
+				<div class="col-sm-10  sec">
+	    			<input type="number" class="form-control" id="sec" name="sec" placeholder="Processing Time " value='20'>
+	    			<span class="i3 glyphicon glyphicon-ok form-control-feedback"></span>
+				</div>
+				<div class='col-sm-2'></div>
+				<div class="col-sm-10">
+					<p class="help-block">The algorithm will generate as many crosswords as possible in the specified time and display the best one.<br>
+						20-30 sec is good for 30 words. Increase time propotionally to no. of words. (Ex. approx 120 sec for >50 words)<br>
+						Minimum : 5 seconds
+					</p>
+				</div>
+
+			</div>
+			<div class='col-sm-2'></div>
+			<div class="col-sm-10">
+				<button type="submit" id='submit' class="btn btn-primary"> Generate </button>
+			</div>
+		</form>
+
+		<div class='col-sm-2'></div>
+		<div class="col-sm-10">
+			<h3> Presets : </h3>
+			<div class="btn-group" role="group" aria-label="...">
+			  <button type="button" class="btn btn-sm-1 btn-default">Small</button>
+			  <button type="button" class="btn btn-md-1 btn-default">Medium 1</button>
+			  <button type="button" class="btn btn-md-2 btn-default">Medium 2</button>
+			  <button type="button" class="btn btn-lg-1 btn-default">Large 1</button>
+			  <button type="button" class="btn btn-lg-2 btn-default">Large 2</button>
+			</div>
+		</div>
+
+	</div>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/input.js') }}" ></script>
+{% endblock %}

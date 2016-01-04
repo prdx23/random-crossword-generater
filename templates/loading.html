@@ -1,0 +1,32 @@
+{% extends "main.html" %}
+
+{% block body %}
+
+	<br><br><br><br><br><br>
+	<div class='container'>
+
+		<center>
+			<i class="fa fa-cog fa-spin fa-5x"></i>
+			<h1>  LOADING </h1>
+		
+
+			<p class="help-block">
+				<span class='line1'></span><br>
+				<span class='line2'></span><br>
+				<span class='line3'></span><br>
+				<span class='line4'></span><br>
+			</p>
+		
+		</center>
+	</div>
+
+
+
+<p class='info'>
+</p>
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/loading.js') }}" ></script>
+
+
+
+{% endblock %}

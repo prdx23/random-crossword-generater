@@ -1,0 +1,68 @@
+{% extends "main.html" %}
+
+{% block body %}
+<link href="{{ url_for('static', filename='css/output.css') }}" rel="stylesheet">
+
+<div class='container'>
+	
+	
+	<h2>Crossword Generated :</h2>
+	<p class="help-block">(Clues Below the crossword)</p>
+	<div>
+		{% for row in gridnum %}
+			<div class='crossword_outer'>
+			{% set i = loop %}
+			{% for col in row %}
+				{% set j = loop %}
+				<div class='crossword_block' {% if grid[i.index - 1][j.index - 1] == '-' %}style='background-color: black;' {% else %}style='background-color: white;'{% endif %}>
+					<center>
+						{%- if gridnum[i.index - 1][j.index - 1] != '-' -%}
+						{{gridnum[i.index - 1][j.index - 1]}}
+						{%- endif -%}
+					</center>
+				</div>
+			{% endfor %}
+			</div>
+		{% endfor %}
+	</div>
+	
+	<h2>Clues :</h2>
+
+	<p class="help-block">
+		{%- for word in wordlist -%}
+			{{ word.startnum }} , {{ word.dir}} , {{ word.clue}} <br>
+		{%- endfor -%}
+	</p>
+	
+	<h2>Answer Key : </h2>
+	
+	<div>
+		{% for row in grid %}
+			<div class='crossword_outer'>
+			{% set i = loop %}
+			{% for col in row %}
+				{% set j = loop %}
+				<div class='crossword_block' {% if grid[i.index - 1][j.index - 1] == '-' %}style='background-color: black;' {% else %}style='background-color: white;'{% endif %}>
+					<center>
+						{%- if grid[i.index - 1][j.index - 1] != '-' -%}
+						{{grid[i.index - 1][j.index - 1]}}
+						{%- endif -%}
+					</center>
+				</div>
+			{% endfor %}
+			</div>
+		{% endfor %}
+	</div>
+
+	<br>
+	<h4>Sources : </h4>
+	<p class="help-block">
+	Words are taken from : <a href='https://www.randomlists.com/'>https://www.randomlists.com/</a><br>
+	Definitions taken from : <a href='https://wordnet.princeton.edu/'>https://wordnet.princeton.edu/</a><br>
+	Example sentences taken from : <a href='http://sentence.yourdictionary.com/'>http://sentence.yourdictionary.com/</a>
+	<br><br>
+	Made by : Arsh (<a href=''>Github</a>)
+	</p>
+</div>
+<br><br>
+{% endblock %}

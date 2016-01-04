@@ -1,0 +1,21 @@
+
+.crossword_outer
+{
+	display: block;
+	font-size: 0;
+	overflow-x: hidden;
+    white-space: nowrap;
+}
+
+.crossword_block
+{
+	overflow: hidden;
+	font-size: 10px;
+	color: black;
+	/*background-color: cyan;*/
+	height: 15px;
+	width: 15px;
+	border: 1px solid black;
+	display: inline-block;
+	white-space: normal;
+}
