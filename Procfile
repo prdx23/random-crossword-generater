@@ -1,1 +1,1 @@
-web: uwsgi -s /tmp/uwsgi.sock --module app --callable app --enable-threads
+web: uwsgi --http-socket :$PORT --module app --callable app --enable-threads
