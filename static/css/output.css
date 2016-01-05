@@ -6,6 +6,7 @@
 	display: block;
 	font-size: 0;
 	overflow-x: hidden;
+	overflow-y:hidden;
     white-space: nowrap;
     height: 15px;
 }
