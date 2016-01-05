@@ -8,9 +8,9 @@
 	
 	<h2>Crossword Generated :</h2>
 	<p class="help-block">(Clues Below the crossword)</p>
-	<div>
+	<div style='overflow-x: auto;white-space: nowrap;'>
 		{% for row in gridnum %}
-			<div class='crossword_outer'>
+			<div class='crossword_outer' style='width: {{length}}px;'>
 			{% set i = loop %}
 			{% for col in row %}
 				{% set j = loop %}
@@ -36,9 +36,9 @@
 	
 	<h2>Answer Key : </h2>
 	
-	<div>
+	<div style='overflow-x: auto;white-space: nowrap;'>
 		{% for row in grid %}
-			<div class='crossword_outer'>
+			<div class='crossword_outer'style='width: {{length}}px;'>
 			{% set i = loop %}
 			{% for col in row %}
 				{% set j = loop %}

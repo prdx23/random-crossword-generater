@@ -1,10 +1,13 @@
 
+
+
 .crossword_outer
 {
 	display: block;
 	font-size: 0;
 	overflow-x: hidden;
     white-space: nowrap;
+    height: 15px;
 }
 
 .crossword_block

@@ -66,11 +66,11 @@ def display_info_2():
 
 @app.route('/_output_/', methods=["GET","POST"])
 def output():
-	return render_template('output.html', grid = info.grid, gridnum = info.gridnum , wordlist = info.wordlist)
+	return render_template('output.html',length=(len(info.grid[0]) * 15), grid = info.grid, gridnum = info.gridnum , wordlist = info.wordlist)
 
 @app.route('/loading/_output_/', methods=["GET","POST"])
 def output_2():
-	return render_template('output.html', grid = info.grid, gridnum = info.gridnum , wordlist = info.wordlist)
+	return render_template('output.html',length=(len(info.grid[0]) * 15), grid = info.grid, gridnum = info.gridnum , wordlist = info.wordlist)
 
 if __name__ == "__main__":
 	port = int(os.environ.get('PORT', 5000))

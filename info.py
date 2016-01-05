@@ -3,6 +3,6 @@
 
 info_string = '###%'
 
-grid = []
-gridnum = []
+grid = [[]]
+gridnum = [[]]
 wordlist = []

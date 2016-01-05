@@ -21,6 +21,7 @@ def main():
 	info.info_string = 'Connecting to server.....###%'
 	print 'Loading words ...'
 	'''
+	#for debugging
 	w = ['miniature','unsightly','male','pleasant','mature','plastic','funny','glamorous','maddening','voracious','precious','chubby','ratty','rambunctious','complex']
 	for txt in w:
 		wd = word(txt,'a','clue')
