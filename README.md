@@ -9,10 +9,17 @@ To run this app on your local machine :
 
 1. Clone this github
 
-2. Activate the virtual environment
+      ```sh
+      $ git clone https://github.com/Arsh23/random-crossword-generater.git crossword-app
+      $ cd crossword-app
+      ```
+2. create new virtual environment
 
       ```sh
-      $ . venv/bin/activate
+      $ sudo pip install virtualenv
+      $ virtualenv venv
+      $ source venv/bin/activate
+      $ pip install -r requirements.txt
        ```
 
 3. To run the server:
@@ -40,6 +47,7 @@ To run this app on your local machine :
        >>> import code as code
        >>> code.main()
        ```
+       
 
 ### Modules/Libraries used :
 
