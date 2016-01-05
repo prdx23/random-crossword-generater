@@ -41,3 +41,12 @@ To run this app on your local machine :
        >>> code.main()
        ```
 
+### Modules/Libraries used :
+
+* python 2.7
+* flask 0.10
+* beautifulsoup 4.4.1
+* requests 2.9.1
+* uWSGI 2.0.12
+* jquery 2.1.4
+* bootstrap 3.3.6
