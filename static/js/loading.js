@@ -8,13 +8,13 @@ var olddata = '';
 
 function main()
 {
-    $.get('_info_', 
+    $.get('_info_',
     	function(data, status)
     	{
         	if(data=='DONE')
         	{
+                clearInterval(id);
         		window.location.replace('_output_');
-        		clearInterval(id);
         	}
         	else
         	{
@@ -69,4 +69,4 @@ function main()
     );
 }
 
-var id = setInterval(main,timer); 
+var id = setInterval(main,timer);
